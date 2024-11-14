@@ -90,6 +90,6 @@ public class PlayerController : MonoBehaviour
 
     bool CheckInputPressed()
     {
-        return Input.GetKey(KeyCode.D) != true && Input.GetKey(KeyCode.A) != true && Input.GetKey(KeyCode.S) != true && Input.GetKey(KeyCode.W) != true
+        return Input.GetKey(KeyCode.D) != true && Input.GetKey(KeyCode.A) != true && Input.GetKey(KeyCode.S) != true && Input.GetKey(KeyCode.W) != true;
     }
 }
