@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.Burst.Intrinsics.X86;
 
 public class PlayerController : MonoBehaviour
 {
@@ -42,8 +43,11 @@ public class PlayerController : MonoBehaviour
         rb.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2((mousePos.y - transform.position.y), (mousePos.x - transform.position.x)) * Mathf.Rad2Deg);
     }
 
-    void Movement() 
+    void Movement()
     {
+        //Adicionei aqui o moving inicalmente como false, como o movent é validado no update, sempre que a cada frame passar se o usuario não cliclou em nenhum tecla, o moving torna-se false, caso contrário vira true.
+        moving = false;
+
         if (Input.GetKey(KeyCode.W))
         {
             ApplyMovement(UP);
@@ -64,11 +68,6 @@ public class PlayerController : MonoBehaviour
             ApplyMovement(RIGHT);
         }
 
-        // Esse validação, é necessária? (validar com o Kauan)
-        if (CheckInputPressed) 
-        {
-            moving = false;
-        }
     }
 
     void ApplyMovement(Vector3 direction)
@@ -79,17 +78,16 @@ public class PlayerController : MonoBehaviour
 
     void Animations()
     {
-        if (!moving)
-        {
-            animator.SetBool("walking", false);
-        } else
-        {
-            animator.SetBool("walking", true);
-        }
+        animator.SetBool("walking", moving);
     }
 
-    bool CheckInputPressed()
+    /* 
+     * Deixei aqui a regra antiga para validação, verificar com Kauan.
+      bool CheckInputPressed()
     {
         return Input.GetKey(KeyCode.D) != true && Input.GetKey(KeyCode.A) != true && Input.GetKey(KeyCode.S) != true && Input.GetKey(KeyCode.W) != true;
     }
+     
+     */
+
 }
