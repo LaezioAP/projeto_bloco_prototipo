@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool Moving = false;
-    float Speed = 5.0f;
+    private Vector3 UP = Vector3.up;
+    private Vector3 LEFT = Vector3.left;
+    private Vector3 RIGHT = Vector3.right;
+    private Vector3 DOWN = Vector3.down;
+
+    public Animator animator;
+
+    public bool moving = false;
+    float speed = 7.0f;
 
     Vector3 mousePos;
     Camera cam;
@@ -20,11 +27,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        rotateToCamera();
+        RotateToCamera();
+        Animations();
+    }
+
+    private void FixedUpdate()
+    {
         Movement();
     }
 
-    void rotateToCamera() 
+    void RotateToCamera() 
     {
         mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z - cam.transform.position.z));
         rb.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2((mousePos.y - transform.position.y), (mousePos.x - transform.position.x)) * Mathf.Rad2Deg);
@@ -34,27 +46,50 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(Vector3.up * Speed * Time.deltaTime, Space.World);
-            Moving = true;
+            ApplyMovement(UP);
         }
+
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.left * Speed * Time.deltaTime, Space.World);
-            Moving = true;
+            ApplyMovement(LEFT);
         }
+
         if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(Vector3.down * Speed * Time.deltaTime, Space.World);
-            Moving = true;
+            ApplyMovement(DOWN);
         }
+
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right * Speed * Time.deltaTime, Space.World);
-            Moving = true;
+            ApplyMovement(RIGHT);
         }
-        if (Input.GetKey(KeyCode.D) != true && Input.GetKey(KeyCode.A) != true && Input.GetKey(KeyCode.S) != true && Input.GetKey(KeyCode.W) != true) 
+
+        // Esse validação, é necessária? (validar com o Kauan)
+        if (checkInputPressed) 
         {
-            Moving = false;
+            moving = false;
         }
+    }
+
+    void ApplyMovement(Vector3 direction)
+    {
+        transform.Translate(direction * speed * Time.deltaTime, Space.World);
+        moving = true;
+    }
+
+    void Animations()
+    {
+        if (!moving)
+        {
+            animator.SetBool("walking", false);
+        } else
+        {
+            animator.SetBool("walking", true);
+        }
+    }
+
+    bool CheckInputPressed()
+    {
+        return Input.GetKey(KeyCode.D) != true && Input.GetKey(KeyCode.A) != true && Input.GetKey(KeyCode.S) != true && Input.GetKey(KeyCode.W) != true
     }
 }
