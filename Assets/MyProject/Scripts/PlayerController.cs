@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Esse validação, é necessária? (validar com o Kauan)
-        if (checkInputPressed) 
+        if (CheckInputPressed) 
         {
             moving = false;
         }
