@@ -64,11 +64,6 @@ public class PlayerController : MonoBehaviour
             ApplyMovement(RIGHT);
         }
 
-        // Esse validação, é necessária? (validar com o Kauan)
-        if (checkInputPressed) 
-        {
-            moving = false;
-        }
     }
 
     void ApplyMovement(Vector3 direction)
@@ -86,10 +81,5 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetBool("walking", true);
         }
-    }
-
-    bool CheckInputPressed()
-    {
-        return Input.GetKey(KeyCode.D) != true && Input.GetKey(KeyCode.A) != true && Input.GetKey(KeyCode.S) != true && Input.GetKey(KeyCode.W) != true
     }
 }
