@@ -80,14 +80,4 @@ public class PlayerController : MonoBehaviour
     {
         animator.SetBool("walking", moving);
     }
-
-    /* 
-     * Deixei aqui a regra antiga para validação, verificar com Kauan.
-      bool CheckInputPressed()
-    {
-        return Input.GetKey(KeyCode.D) != true && Input.GetKey(KeyCode.A) != true && Input.GetKey(KeyCode.S) != true && Input.GetKey(KeyCode.W) != true;
-    }
-     
-     */
-
 }
