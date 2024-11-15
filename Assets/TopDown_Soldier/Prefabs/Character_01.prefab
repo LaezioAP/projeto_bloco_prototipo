@@ -78,14 +78,14 @@ SpriteRenderer:
   m_Sprite: {fileID: -1337084205146215169, guid: 3908d28e9ed59614ca406776a4afc3ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 8, y: 7.0117188}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &246058445603208887
 Animator:
   serializedVersion: 5
