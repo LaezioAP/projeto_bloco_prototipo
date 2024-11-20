@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     public bool moving = false;
-    float speed = 7.0f;
+    float speed = 6.0f;
 
     Vector3 mousePos;
     Camera cam;
