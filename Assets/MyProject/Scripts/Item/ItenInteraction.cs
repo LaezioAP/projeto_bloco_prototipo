@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItenInteraction : MonoBehaviour
 {
-    public string itemName = "paçoca";
+    public string itemName = "livro";
 
     public virtual void Interact()
     {
