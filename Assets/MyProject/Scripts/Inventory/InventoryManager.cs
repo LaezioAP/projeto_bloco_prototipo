@@ -6,7 +6,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance { get; private set; }
 
-    private List<ItemColectable> inventoryItems = new List<ItemColectable>();
+    private List<IInventoryItem> inventoryItems = new List<IInventoryItem>();
     private bool isInventoryOpen = false;
 
     [SerializeField] private GameObject inventoryUI; // O painel de UI para o inventário
@@ -14,14 +14,14 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
 
-        if (Instance == null)
+        if (Instance != null && Instance != this)
         {
-            Instance = this;
+            Destroy(gameObject); // Garante que só exista uma instância do Singleton
+            return;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -42,10 +42,16 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddItemToInventory(ItemColectable item)
+    public void AddItemToInventory(IInventoryItem item)
     {
+        if (item == null)
+        {
+            Debug.LogError("Tentativa de adicionar um item nulo ao inventário!");
+            return;
+        }
+
         inventoryItems.Add(item);
-        Debug.Log($"{item.itemName} foi adicionado ao inventário!");
+        Debug.Log($"{item.GetItemName()} foi adicionado ao inventário!");
     }
 
     public void ToggleInventory()
@@ -58,19 +64,8 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public List<ItemColectable> GetInventoryItems()
+    public List<IInventoryItem> GetInventoryItems()
     {
-        foreach (var item in InventoryManager.Instance.GetInventoryItems())
-        {
-            if (item == null)
-            {
-                Debug.LogError("Item encontrado como null!");
-                continue;
-            }
-
-            Debug.Log($"Item no inventário: {item.itemName}");
-            // Processar o item
-        }
         return inventoryItems;
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -38,15 +39,15 @@ public class InventoryUI : MonoBehaviour
             }
 
             GameObject itemGO = Instantiate(inventoryItemPrefab, inventoryPanel);
-            
-            Text itemText = itemGO.GetComponentInChildren<Text>();
+
+            TMP_Text itemText = itemGO.GetComponentInChildren<TMP_Text>();
             if (itemText == null)
             {
                 Debug.LogError("Componente Text não encontrado no prefab do item!");
                 continue;
             }
 
-            itemText.text = item.itemName; // Atualiza o texto
+            itemText.text = item.GetItemName(); // Atualiza o texto
         }
     }
 }
