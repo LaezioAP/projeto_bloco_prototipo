@@ -6,6 +6,9 @@ using UnityEngine.Tilemaps;
 
 public class PlayerMoviment : MonoBehaviour
 {
+
+    // Não está sendo usado, criei esse pra diminuir nosso código em playerController. (Está funcionando)
+
     public float moveSpeed = 5f; // Velocidade normal do jogador
     private Rigidbody2D rig; // Referência ao Rigidbody2D
     public Camera cam; // Referência à câmera para detectar posição do mouse
