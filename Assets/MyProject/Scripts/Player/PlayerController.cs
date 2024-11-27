@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     public bool moving = false;
+    public bool isRotationEnabled = true;
     float speed = 6.0f;
 
     Vector3 mousePos;
@@ -23,12 +25,48 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
-        
+        GameEvents.Instance.OnStartDialogue += HandleStartDialogue;
+        GameEvents.Instance.OnFinishDialogue += HandleFinishtDialogue;
+    }
+
+    private void HandleStartDialogue(DialogueDataSO sO)
+    {
+        moving = false;
+        UP = Vector3.zero;
+        DOWN = Vector3.zero;
+        LEFT = Vector3.zero;
+        RIGHT = Vector3.zero;
+        StopCamera();
+    }
+
+    private void HandleFinishtDialogue()
+    {
+        moving = true;
+        UP = Vector3.up;
+        DOWN = Vector3.down;
+        LEFT = Vector3.left;
+        RIGHT = Vector3.right;
+        RotateToCamera();
+    }
+
+
+    private void OnDestroy()
+    {
+        GameEvents.Instance.OnStartDialogue -= HandleStartDialogue;
+        GameEvents.Instance.OnFinishDialogue -= HandleFinishtDialogue;
     }
 
     private void Update()
     {
-        RotateToCamera();
+
+        if (isRotationEnabled)
+        {
+            RotateToCamera();
+        }
+        else 
+        {
+            StopCamera();
+        }
         Animations();
     }
 
@@ -37,10 +75,17 @@ public class PlayerController : MonoBehaviour
         Movement();
     }
 
+
+    void StopCamera() 
+    {
+        rb.transform.eulerAngles = Vector3.zero;
+        isRotationEnabled = false;
+    }
     void RotateToCamera() 
     {
         mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z - cam.transform.position.z));
         rb.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2((mousePos.y - transform.position.y), (mousePos.x - transform.position.x)) * Mathf.Rad2Deg);
+        isRotationEnabled = true;
     }
 
     void Movement()
