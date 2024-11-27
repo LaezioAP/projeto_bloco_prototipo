@@ -3303,7 +3303,7 @@ MonoBehaviour:
   nameText: {fileID: 219748321}
   dialogueBar: {fileID: 733418675}
   messageText: {fileID: 588433484}
-  intervalBetweenSentences: 0.5
+  intervalBetweenSentences: 0.6
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3738,7 +3738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.9433962, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3822,6 +3822,18 @@ PrefabInstance:
     - target: {fileID: 1904082332266804717, guid: 47325c4135ccba04783dcc3b10092d58, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933452202448117071, guid: 47325c4135ccba04783dcc3b10092d58, type: 3}
+      propertyPath: m_Color.b
+      value: 0.16153437
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933452202448117071, guid: 47325c4135ccba04783dcc3b10092d58, type: 3}
+      propertyPath: m_Color.g
+      value: 0.16153437
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933452202448117071, guid: 47325c4135ccba04783dcc3b10092d58, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6226415
       objectReference: {fileID: 0}
     - target: {fileID: 7795745256957230647, guid: 47325c4135ccba04783dcc3b10092d58, type: 3}
       propertyPath: m_IsTrigger
