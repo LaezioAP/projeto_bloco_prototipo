@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ItemColectable : ItenInteraction, IInventoryItem
+/*public class ItemColectable : ItenInteraction, IInventoryItem
 {
     public string GetItemName()
     {
@@ -26,4 +26,4 @@ public class ItemColectable : ItenInteraction, IInventoryItem
     {
         Debug.Log($"Usando o item: {itemName}");
     }
-}
+}*/

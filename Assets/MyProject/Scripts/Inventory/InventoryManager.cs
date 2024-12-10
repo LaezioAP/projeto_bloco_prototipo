@@ -4,68 +4,30 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public static InventoryManager Instance { get; private set; }
+    [SerializeField] private InventoryUI inventoryUI;
 
-    private List<IInventoryItem> inventoryItems = new List<IInventoryItem>();
-    private bool isInventoryOpen = false;
+    public int inventorySize = 10;
 
-    [SerializeField] private GameObject inventoryUI; // O painel de UI para o inventário
-
-    private void Awake()
-    {
-
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject); // Garante que só exista uma instância do Singleton
-            return;
-        }
-
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
 
     private void Start()
     {
-        // Garante que o inventário começa fechado
-        if (inventoryUI != null)
-        {
-            inventoryUI.SetActive(false);
-        }
+        inventoryUI.IniciaUIInventory(inventorySize);
     }
 
     private void Update()
     {
-        // Alterna o inventário ao pressionar "I"
+        // Liga e desliga o inventário ao pressionar "I"
         if (Input.GetKeyDown(KeyCode.I))
         {
-            ToggleInventory();
+            if (inventoryUI.isActiveAndEnabled == false)
+            {
+                inventoryUI.Show();
+            }
+            else 
+            {
+                inventoryUI.Hide();
+            }
         }
     }
 
-    public void AddItemToInventory(IInventoryItem item)
-    {
-        if (item == null)
-        {
-            Debug.LogError("Tentativa de adicionar um item nulo ao inventário!");
-            return;
-        }
-
-        inventoryItems.Add(item);
-        Debug.Log($"{item.GetItemName()} foi adicionado ao inventário!");
-    }
-
-    public void ToggleInventory()
-    {
-        isInventoryOpen = !isInventoryOpen;
-
-        if (inventoryUI != null)
-        {
-            inventoryUI.SetActive(isInventoryOpen);
-        }
-    }
-
-    public List<IInventoryItem> GetInventoryItems()
-    {
-        return inventoryItems;
-    }
 }
