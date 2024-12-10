@@ -8,6 +8,7 @@ public class MessageText : MonoBehaviour
 {
     [SerializeField] private float intervaloEntreLetras = 0.5f;
     private TMP_Text text;
+    private bool isAnimating = false;
 
     private void Awake()
     {
@@ -16,9 +17,11 @@ public class MessageText : MonoBehaviour
 
     public IEnumerator ShowText(string content) 
     {
+        isAnimating = true;
         text.maxVisibleCharacters = 0;
         text.SetText(content);  
         yield return RevealChars();
+        isAnimating = false;
     }
 
     public void HideText() 
@@ -30,6 +33,12 @@ public class MessageText : MonoBehaviour
     public void SkipAnimation() 
     {
         text.maxVisibleCharacters = text.textInfo.characterCount;
+        isAnimating = false;
+    }
+
+    public bool IsAnimating()
+    {
+        return isAnimating;
     }
 
     private IEnumerator RevealChars() 

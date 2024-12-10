@@ -14,13 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sentences:
   - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
-    content: 'Oi eu sou o HEROI
-
-
-'
+    content: "N\xE3o \xE9 hora de voltar para cama\n\n"
   - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
-    content: "Cad\xEA o outro NPC? "
-  - ActorData: {fileID: 11400000, guid: c597d6fbf0ac3cf40aafe186a9c65113, type: 2}
-    content: Oi eu sou o T!
-  - ActorData: {fileID: 11400000, guid: c597d6fbf0ac3cf40aafe186a9c65113, type: 2}
-    content: Ta do seu lado ai po
+    content: "O sol j\xE1 nasceu"

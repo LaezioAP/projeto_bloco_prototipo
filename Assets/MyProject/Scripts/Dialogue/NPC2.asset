@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e9c166c3a478c429fad1dbf0ff0750, type: 3}
   m_Name: NPC2
   m_EditorClassIdentifier: 
-  CharName: Bola2
-  sprite: {fileID: 843824740, guid: 849542adfd3bc514a881d9f64fb6d327, type: 3}
+  CharName: Armarinho
+  sprite: {fileID: 21300000, guid: 630489a0c04df134e86398c5a2f3ad13, type: 3}

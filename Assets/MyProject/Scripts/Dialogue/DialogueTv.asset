@@ -10,12 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 747e6eacf70b91b479f475991cdd4145, type: 3}
-  m_Name: DialogueBola2
+  m_Name: DialogueTv
   m_EditorClassIdentifier: 
   Sentences:
   - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
-    content: "Arrumei a prateleira como mam\xE3e pediu"
+    content: "O show dos Looney Toones come\xE7a \xE0s 8...."
   - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
-    content: Mas sem meu livro do Sherlock Holmes  parece incompleta...
-  - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
-    content: "Ser\xE1 que John o pegou?"
+    content: "Ser\xE1 que consigo tomar caf\xE9 antes?"
