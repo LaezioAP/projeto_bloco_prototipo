@@ -32,9 +32,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 3569625612340435487}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 47.0504, y: -41.88985}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 47.0504, y: 46.7956}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &8724640709316815821
@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 5789242424089590863}
   - component: {fileID: 3702778508786358074}
   - component: {fileID: 3736123116420838606}
+  - component: {fileID: 1944028795022999295}
   m_Layer: 5
   m_Name: ItemUI 1
   m_TagString: Untagged
@@ -483,7 +484,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c8db1b0a9c81ccd4b8dba349465e89b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f941ad5a526b00d468ded93fce6f376a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -505,3 +506,83 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 010338ced102f8444899a2ca26b548b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemImage: {fileID: 658736733801414744}
+  quantityText: {fileID: 3270795860076634226}
+  borderImage: {fileID: 3350269714602994374}
+--- !u!114 &1944028795022999295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8038777589305492015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3736123116420838606}
+          m_TargetAssemblyTypeName: UIInventoryItem, Assembly-CSharp
+          m_MethodName: OnPointerClick
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 6
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3736123116420838606}
+          m_TargetAssemblyTypeName: UIInventoryItem, Assembly-CSharp
+          m_MethodName: OnDrop
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 13
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3736123116420838606}
+          m_TargetAssemblyTypeName: UIInventoryItem, Assembly-CSharp
+          m_MethodName: OnBeginDrag
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3736123116420838606}
+          m_TargetAssemblyTypeName: UIInventoryItem, Assembly-CSharp
+          m_MethodName: OnEndDrag
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

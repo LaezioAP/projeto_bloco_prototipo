@@ -78917,6 +78917,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.24189758
       objectReference: {fileID: 0}
+    - target: {fileID: 5510687790267730067, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5775656291565582063, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -78973,6 +78977,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -75.18408
       objectReference: {fileID: 0}
+    - target: {fileID: 7786393725235077300, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786393725235077300, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786393725235077300, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8113910631613197239, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -78996,6 +79012,22 @@ PrefabInstance:
     - target: {fileID: 8113910631613197239, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -315.18408
+      objectReference: {fileID: 0}
+    - target: {fileID: 8318467892918796686, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
+      propertyPath: image
+      value: 
+      objectReference: {fileID: 21300000, guid: a8307562897f2ba4a93299996fa1b196, type: 3}
+    - target: {fileID: 8318467892918796686, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
+      propertyPath: title
+      value: "Sof\xE1"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8318467892918796686, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
+      propertyPath: quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8318467892918796686, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
+      propertyPath: description
+      value: "Velho sof\xE1 empoeirado"
       objectReference: {fileID: 0}
     - target: {fileID: 8657964884516986272, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
       propertyPath: m_AnchorMax.y

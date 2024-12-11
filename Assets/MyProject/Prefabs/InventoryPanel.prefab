@@ -348,6 +348,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 3736123116420838606, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
   contentPanel: {fileID: 6192173693687770688}
+  descriptionUI: {fileID: 1126193426496050964}
+  image: {fileID: 0}
+  quantity: 0
+  title: 
+  description: 
 --- !u!1 &3147694885817229265
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +441,7 @@ GameObject:
   - component: {fileID: 13854521190574159}
   - component: {fileID: 1255983363966881507}
   - component: {fileID: 321983249968279646}
+  - component: {fileID: 1126193426496050964}
   m_Layer: 5
   m_Name: Description
   m_TagString: Untagged
@@ -548,6 +554,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1126193426496050964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3610704928002407906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7be3f2211da49a46bf11d870a520c25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemImage: {fileID: 7946369732969984158}
+  title: {fileID: 5510687790267730067}
+  description: {fileID: 7786393725235077300}
 --- !u!1 &3874216392851740613
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +874,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1007,9 +1028,9 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 1024
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
