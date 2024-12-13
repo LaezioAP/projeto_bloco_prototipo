@@ -10,6 +10,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private UIInventoryItem itemPrefab; // Prefab para representar cada item
     [SerializeField] private RectTransform contentPanel; // Onde os itens serão listados
     [SerializeField] private DescriptionUI descriptionUI;
+    [SerializeField] private MouseFollower mouseFollower;
 
     List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem> ();
 
@@ -20,6 +21,7 @@ public class InventoryUI : MonoBehaviour
     private void Awake()
     {
         Hide();
+        mouseFollower.Toggle(false);
         descriptionUI.ResetDescription ();
     }
 
@@ -44,6 +46,7 @@ public class InventoryUI : MonoBehaviour
 
     private void HandleEndDrag(UIInventoryItem item)
     {
+        mouseFollower.Toggle(false);
     }
 
     private void HandlwSwap(UIInventoryItem item)
@@ -52,6 +55,8 @@ public class InventoryUI : MonoBehaviour
 
     private void HandleBeginDrag(UIInventoryItem item)
     {
+        mouseFollower.Toggle(true);
+        mouseFollower.SetData(image, quantity);
     }
 
     private void HandleItemSelection(UIInventoryItem item)
