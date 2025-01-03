@@ -3545,6 +3545,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1868682866}
     m_Modifications:
+    - target: {fileID: 1691089456800906860, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2560179879053975474, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -3560,6 +3564,14 @@ PrefabInstance:
     - target: {fileID: 2560179879053975474, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -37.176598
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702778508786358074, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702778508786358074, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4089067570650386767, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
       propertyPath: m_Pivot.x
@@ -3643,31 +3655,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4441592873847348299, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4441592873847348299, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4441592873847348299, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 4441592873847348299, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 69
       objectReference: {fileID: 0}
     - target: {fileID: 4441592873847348299, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 42.5
       objectReference: {fileID: 0}
     - target: {fileID: 4441592873847348299, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -42.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469148312510341711, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6348504491626671310, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6605306606213994123, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8038777589305492015, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
       propertyPath: m_Name
       value: ItemUI 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8038777589305492015, guid: 5ffd880c488adb448a13d573f226e9dd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -78346,7 +78374,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 882507313}
+  inventoryData: {fileID: 11400000, guid: 2a7013415567d824c8416fc46134cc5b, type: 2}
   inventorySize: 12
+  initialItems:
+  - quantity: 5
+    item: {fileID: 11400000, guid: 106b134baef051d4a870bf9cd1d47a5e, type: 2}
+  - quantity: 0
+    item: {fileID: 0}
+  - quantity: 2
+    item: {fileID: 11400000, guid: fca0b6c7fce7c9445b1b3d8e1d8b9b30, type: 2}
+  - quantity: 1
+    item: {fileID: 11400000, guid: 106b134baef051d4a870bf9cd1d47a5e, type: 2}
 --- !u!58 &1697264330
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -79234,6 +79272,10 @@ PrefabInstance:
       propertyPath: title
       value: "Sof\xE1"
       objectReference: {fileID: 0}
+    - target: {fileID: 8318467892918796686, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
+      propertyPath: image2
+      value: 
+      objectReference: {fileID: 21300000, guid: d7e1f5b997cfd0743bf0d64f60aaa0c3, type: 3}
     - target: {fileID: 8318467892918796686, guid: 119d0f4658c605a46af9ad8e94a92f52, type: 3}
       propertyPath: quantity
       value: 1

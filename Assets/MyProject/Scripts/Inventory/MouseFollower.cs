@@ -1,3 +1,4 @@
+using Inventory.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,10 @@ public class MouseFollower : MonoBehaviour
     private void Awake()
     {
         canvas = transform.root.GetComponent<Canvas>();
-        item = GetComponent<UIInventoryItem>();
+        Debug.Log($"Canvas encontrado: {canvas != null}");
+
+        item = GetComponentInChildren<UIInventoryItem>();
+        Debug.Log($"UIInventoryItem encontrado: {item != null}");
     }
 
     public void SetData(Sprite sprite, int quantity)  

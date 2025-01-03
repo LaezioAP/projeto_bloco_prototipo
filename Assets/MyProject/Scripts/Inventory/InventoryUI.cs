@@ -4,124 +4,193 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using Unity.VisualScripting;
 
-public class InventoryUI : MonoBehaviour
+namespace Inventory.UI
 {
-    [SerializeField] private UIInventoryItem itemPrefab; // Prefab para representar cada item
-    [SerializeField] private RectTransform contentPanel; // Onde os itens serão listados
-    [SerializeField] private DescriptionUI descriptionUI;
-    [SerializeField] private MouseFollower mouseFollower;
-
-    List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem> ();
-
-    public Sprite image;
-    public int quantity;
-    public string title, description;  
-
-    private void Awake()
+    public class InventoryUI : MonoBehaviour
     {
-        Hide();
-        mouseFollower.Toggle(false);
-        descriptionUI.ResetDescription ();
-    }
+        [SerializeField] private UIInventoryItem itemPrefab; // Prefab para representar cada item
+        [SerializeField] private RectTransform contentPanel; // Onde os itens serão listados
+        [SerializeField] private DescriptionUI descriptionUI;
+        [SerializeField] private MouseFollower mouseFollower;
 
-    public void IniciaUIInventory(int inventorySize) 
-    {
-        for (int i = 0; i < inventorySize; i++) 
+        List<UIInventoryItem> listOfUIItems = new List<UIInventoryItem>();
+
+        private int currentDraggedItemIndex = -1;
+
+        public event Action<int> OnDescriptionRequested,
+            OnItemActionRequested, OnStartDragging;
+        public event Action<int, int> OnSwapItems;
+
+        private void Awake()
         {
-            UIInventoryItem UIitem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
-            UIitem.transform.SetParent(contentPanel);
-            listOfUIItems.Add(UIitem);
-            UIitem.OnItemClicked += HandleItemSelection;
-            UIitem.OnItemBeginDrag += HandleBeginDrag;
-            UIitem.OnItemDroppedOn += HandlwSwap;
-            UIitem.OnItemEndDrag += HandleEndDrag;
-            UIitem.OnRightMouseBtnClick += HandleShowItemActions;
-        }
-    }
-
-    private void HandleShowItemActions(UIInventoryItem item)
-    {
-    }
-
-    private void HandleEndDrag(UIInventoryItem item)
-    {
-        mouseFollower.Toggle(false);
-    }
-
-    private void HandlwSwap(UIInventoryItem item)
-    {
-    }
-
-    private void HandleBeginDrag(UIInventoryItem item)
-    {
-        mouseFollower.Toggle(true);
-        mouseFollower.SetData(image, quantity);
-    }
-
-    private void HandleItemSelection(UIInventoryItem item)
-    {
-        descriptionUI.SetDescription(image, title, description);
-        listOfUIItems[0].Select();
-    }
-
-    public void Show() 
-    {
-        gameObject.SetActive (true);
-        descriptionUI.ResetDescription();
-
-        listOfUIItems[0].SetData(image, quantity);
-    }
-    public void Hide() 
-    {
-        gameObject.SetActive (false);
-    }
-
-
-
-
-
-
-
-   /* private void OnEnable()
-    {
-        UpdateInventoryUI();
-    }
-
-    public void UpdateInventoryUI()
-    {
-        // Limpa os itens existentes
-        foreach (Transform child in contentPanel)
-        {
-            Destroy(child.gameObject);
+            Hide();
+            mouseFollower.Toggle(false);
+            descriptionUI.ResetDescription();
         }
 
-        var items = InventoryManager.Instance?.GetInventoryItems();
-        if (items == null || items.Count == 0)
+        private void HandleShowItemActions(UIInventoryItem inventoryItemUI)
         {
-            Debug.Log("Nenhum item no inventário.");
-            return;
-        }
 
-        // Adiciona os itens atuais do inventário
-        foreach (var item in items)
+        }
+        private void HandleEndDrag(UIInventoryItem inventoryItemUI)
         {
-            if (item == null)
+            ResetDraggedItem();
+        }
+        private void HandleSwap(UIInventoryItem inventoryItemUI)
+        {
+            int index = listOfUIItems.IndexOf(inventoryItemUI);
+            if (index == -1)
             {
-                Debug.LogWarning("Item nulo encontrado no inventário.");
-                continue;
+                return;
             }
-
-            GameObject itemGO = Instantiate(inventoryItemPrefab, contentPanel);
-
-            TMP_Text itemText = itemGO.GetComponentInChildren<TMP_Text>();
-            if (itemText == null)
-            {
-                Debug.LogError("Componente Text não encontrado no prefab do item!");
-                continue;
-            }
-
-            itemText.text = item.GetItemName(); // Atualiza o texto
+            OnSwapItems?.Invoke(currentDraggedItemIndex, index);
+            HandleItemSelection(inventoryItemUI);
         }
-    } */
+
+        private void ResetDraggedItem()
+        {
+            mouseFollower.Toggle(false);
+            currentDraggedItemIndex = -1;
+        }
+
+        private void HandleBeginDrag(UIInventoryItem inventoryItemUI)
+        {
+            int index = listOfUIItems.IndexOf(inventoryItemUI);
+            if (index == -1)
+                return;
+            currentDraggedItemIndex = index;
+            HandleItemSelection(inventoryItemUI);
+            OnStartDragging?.Invoke(index);
+        }
+
+        public void CreateDraggedItem(Sprite sprite, int quantity)
+        {
+            mouseFollower.Toggle(true);
+            mouseFollower.SetData(sprite, quantity);
+        }
+
+        private void HandleItemSelection(UIInventoryItem inventoryItemUI)
+        {
+            int index = listOfUIItems.IndexOf(inventoryItemUI);
+            if (index == -1)
+                return;
+            OnDescriptionRequested?.Invoke(index);
+        }
+        public void Show()
+        {
+            gameObject.SetActive(true);
+            ResetSelection();
+        }
+
+        public void ResetSelection()
+        {
+            descriptionUI.ResetDescription();
+            DeselectAllItems();
+        }
+
+        private void DeselectAllItems()
+        {
+            foreach (UIInventoryItem item in listOfUIItems)
+            {
+                item.Deselect();
+            }
+        }
+
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+            ResetDraggedItem();
+        }
+
+        public void IniciaUIInventory(int inventorySize)
+        {
+            for (int i = 0; i < inventorySize; i++)
+            {
+                UIInventoryItem UIitem = Instantiate(itemPrefab, Vector3.zero, Quaternion.identity);
+                UIitem.transform.SetParent(contentPanel);
+                listOfUIItems.Add(UIitem);
+                UIitem.OnItemClicked += HandleItemSelection;
+                UIitem.OnItemBeginDrag += HandleBeginDrag;
+                UIitem.OnItemDroppedOn += HandleSwap;
+                UIitem.OnItemEndDrag += HandleEndDrag;
+                UIitem.OnRightMouseBtnClick += HandleShowItemActions;
+            }
+        }
+
+        internal void ResetAllItems()
+        {
+            foreach (var item in listOfUIItems)
+            {
+                item.ResetData();
+                item.Deselect();
+            }
+        }
+
+        internal void UpdateDescription(int itemIndex, Sprite itemImage, string name, string description)
+        {
+            descriptionUI.SetDescription(itemImage, name, description);
+            DeselectAllItems();
+            listOfUIItems[itemIndex].Select();
+        }
+
+        public void UpdateData(int itemIndex, Sprite itemImage, int itemQuantity)
+        {
+            if (listOfUIItems.Count > itemIndex)
+            {
+                listOfUIItems[itemIndex].SetData(itemImage, itemQuantity);
+            }
+        }
+
+       
+
+
+
+
+
+
+
+        /* private void OnEnable()
+         {
+             UpdateInventoryUI();
+         }
+
+         public void UpdateInventoryUI()
+         {
+             // Limpa os itens existentes
+             foreach (Transform child in contentPanel)
+             {
+                 Destroy(child.gameObject);
+             }
+
+             var items = InventoryManager.Instance?.GetInventoryItems();
+             if (items == null || items.Count == 0)
+             {
+                 Debug.Log("Nenhum item no inventário.");
+                 return;
+             }
+
+             // Adiciona os itens atuais do inventário
+             foreach (var item in items)
+             {
+                 if (item == null)
+                 {
+                     Debug.LogWarning("Item nulo encontrado no inventário.");
+                     continue;
+                 }
+
+                 GameObject itemGO = Instantiate(inventoryItemPrefab, contentPanel);
+
+                 TMP_Text itemText = itemGO.GetComponentInChildren<TMP_Text>();
+                 if (itemText == null)
+                 {
+                     Debug.LogError("Componente Text não encontrado no prefab do item!");
+                     continue;
+                 }
+
+                 itemText.text = item.GetItemName(); // Atualiza o texto
+             }
+         } */
+    }
 }
