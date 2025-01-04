@@ -13,7 +13,7 @@ namespace Inventory
 
         [SerializeField] private InventorySO inventoryData;
 
-        public int inventorySize = 10;
+        public int inventorySize = 5;
 
         public List<InventoryItem> initialItems = new List<InventoryItem>();
 
