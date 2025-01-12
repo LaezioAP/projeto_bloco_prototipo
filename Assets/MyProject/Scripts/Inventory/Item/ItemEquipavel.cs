@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Inventory.Model 
 {
+    [CreateAssetMenu]
     public class ItemEquipavel : ItemSO, IDestroyableItem, IItemAction
     {
         public string ActionName => "Equipado";
@@ -12,7 +13,14 @@ namespace Inventory.Model
 
         public bool PerformAction(GameObject character, List<ItemParameter> itemState = null)
         {
-            throw new System.NotImplementedException();
+            AgentWeapon weaponSystem = character.GetComponent<AgentWeapon>();
+            if (weaponSystem != null) 
+            {
+                weaponSystem.SetWeapon(this, itemState == null ?
+                    DefaultParametersList : itemState);
+                return true;
+            }
+            return false;
         }
     }
 

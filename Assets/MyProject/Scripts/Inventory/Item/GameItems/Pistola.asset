@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3c0788339a09484da722a1e3d305bb4, type: 3}
-  m_Name: Pistol
+  m_Script: {fileID: 11500000, guid: 9314e71db89fe81498797e9462a89fb0, type: 3}
+  m_Name: Pistola
   m_EditorClassIdentifier: 
   <IsStackable>k__BackingField: 0
   <MaxStackSize>k__BackingField: 1
   <Name>k__BackingField: Pistola
-  <Description>k__BackingField: Arminha
-  <ItemImage>k__BackingField: {fileID: 553333465, guid: 1c0406d43d967eb47a687c52077f5bb6, type: 3}
-  modifiersData: []
+  <Description>k__BackingField: Antiga pistola de meu pai.
+  <ItemImage>k__BackingField: {fileID: 489397266, guid: 1c0406d43d967eb47a687c52077f5bb6, type: 3}
+  <DefaultParametersList>k__BackingField:
+  - itemParameter: {fileID: 11400000, guid: 23ce9d823b7912c44a0123d9a9a7afeb, type: 2}
+    value: 100
