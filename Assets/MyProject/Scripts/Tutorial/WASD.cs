@@ -8,14 +8,12 @@ public class WASD : MonoBehaviour
     [Header("Tutorial Settings")]
     [TextArea]
     public string tutorialMessage; // Mensagem de tutorial para exibir
-    public float displayTime = 3f; // Tempo que a mensagem ficará na tela
+     // Tempo que a mensagem ficará na tela (não será mais usado)
 
     [Header("UI Reference")]
     public TextMeshProUGUI tutorialText; // Referência ao TextMeshProUGUI no canvas
 
-    private float timer = 0f; // Temporizador interno
-    private bool isDisplaying = false; // Verifica se a mensagem está ativa
-    private bool jaAtivado = false;
+    private bool jaAtivado = false; // Garante que a mensagem aparece apenas uma vez
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,15 +23,11 @@ public class WASD : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (isDisplaying)
+        if (jaAtivado && other.CompareTag("Player")) // Esconde a mensagem ao sair do trigger
         {
-            timer += Time.deltaTime;
-            if (timer >= displayTime)
-            {
-                HideMessage();
-            }
+            HideMessage();
         }
     }
 
@@ -43,7 +37,6 @@ public class WASD : MonoBehaviour
         {
             tutorialText.text = tutorialMessage;
             tutorialText.gameObject.SetActive(true);
-            isDisplaying = true;
             jaAtivado = true;
         }
     }
@@ -53,8 +46,6 @@ public class WASD : MonoBehaviour
         if (tutorialText != null)
         {
             tutorialText.gameObject.SetActive(false);
-            isDisplaying = false;
-            timer = 0f;
         }
     }
 }

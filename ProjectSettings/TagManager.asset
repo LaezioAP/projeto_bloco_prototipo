@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interavel
   - Player2
+  - NPC
   layers:
   - Default
   - TransparentFX
