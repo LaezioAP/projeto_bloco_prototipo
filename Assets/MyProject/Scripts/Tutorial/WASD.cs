@@ -17,6 +17,7 @@ public class WASD : MonoBehaviour
 
     private bool jaAtivado = false; // Tutorial só aparece uma vez
     private bool isPlayerNearby = false; // Verifica se o player está perto
+    private Coroutine currentCoroutine = null;
 
     private void Start()
     {
@@ -63,7 +64,11 @@ public class WASD : MonoBehaviour
         {
             tutorialText.text = tutorialMessage;
             tutorialText.gameObject.SetActive(true);
-            StartCoroutine(HideMessageAfterTime(3f)); // Oculta o tutorial após 3 segundos
+            if (currentCoroutine != null)
+                StopCoroutine(currentCoroutine);
+
+            // Inicia uma nova contagem regressiva
+            currentCoroutine = StartCoroutine(HideMessageAfterTime(5f)); // Oculta o tutorial após 3 segundos
         }
     }
 
