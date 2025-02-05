@@ -34,7 +34,7 @@ namespace Inventory
         {
             inventoryData.Initialize();
             inventoryData.OnInventoryUpdated += UpdateInventoryUI;
-            foreach (InventoryItem item in initialItems) 
+            foreach (InventoryItem item in initialItems)
             {
                 if (item.IsEmpty)
                     continue;
@@ -45,7 +45,7 @@ namespace Inventory
         private void UpdateInventoryUI(Dictionary<int, InventoryItem> inventoryState)
         {
             inventoryUI.ResetAllItems();
-            foreach (var item in inventoryState) 
+            foreach (var item in inventoryState)
             {
                 inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
 
@@ -68,9 +68,9 @@ namespace Inventory
                 return;
 
             IItemAction itemAction = inventoryItem.item as IItemAction;
-            if (itemAction != null) 
+            if (itemAction != null)
             {
-                
+
                 inventoryUI.ShowItemAction(itemIndex);
                 inventoryUI.AddAction(itemAction.ActionName, () => PerformAction(itemIndex));
             }
@@ -90,7 +90,7 @@ namespace Inventory
             audioSource.PlayOneShot(dropClip);
         }
 
-        public void PerformAction(int itemIndex) 
+        public void PerformAction(int itemIndex)
         {
             InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
             if (inventoryItem.IsEmpty)
@@ -139,15 +139,15 @@ namespace Inventory
             inventoryUI.UpdateDescription(itemIndex, item.ItemImage, item.name, description);
         }
 
-        private string PrepareDescription(InventoryItem inventoryItem) 
+        private string PrepareDescription(InventoryItem inventoryItem)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(inventoryItem.item.Description);
             sb.AppendLine();
-            for (int i = 0; i < inventoryItem.itemState.Count; i++) 
+            for (int i = 0; i < inventoryItem.itemState.Count; i++)
             {
                 sb.Append($"{inventoryItem.itemState[i].itemParameter.ParameterName} " +
-                    $": {inventoryItem.itemState[i].value} / " + 
+                    $": {inventoryItem.itemState[i].value} / " +
                     $"{inventoryItem.item.DefaultParametersList[i].value}");
                 sb.AppendLine();
             }
@@ -156,25 +156,34 @@ namespace Inventory
 
         private void Update()
         {
-            // Liga e desliga o inventário ao pressionar "I"
+            // Liga e desliga o inventário ao pressionar "I" ou fecha ao pressionar "Esc"
             if (Input.GetKeyDown(KeyCode.I))
             {
-                if (inventoryUI.isActiveAndEnabled == false)
-                {
-                    inventoryUI.Show();
-                    foreach (var item in inventoryData.GetCurrentInventoryState())
-                    {
-                        inventoryUI.UpdateData(item.Key,
-                            item.Value.item.ItemImage,
-                            item.Value.quantity);
-                    }
-                }
-                else
-                {
-                    inventoryUI.Hide();
-                }
+                ToggleInventory();
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape) && inventoryUI.isActiveAndEnabled)
+            {
+                inventoryUI.Hide();
             }
         }
 
+        private void ToggleInventory()
+        {
+            if (inventoryUI.isActiveAndEnabled == false)
+            {
+                inventoryUI.Show();
+                foreach (var item in inventoryData.GetCurrentInventoryState())
+                {
+                    inventoryUI.UpdateData(item.Key,
+                        item.Value.item.ItemImage,
+                        item.Value.quantity);
+                }
+            }
+            else
+            {
+                inventoryUI.Hide();
+            }
+
+        }
     }
 }
