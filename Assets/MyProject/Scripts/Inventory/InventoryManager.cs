@@ -10,51 +10,51 @@ namespace Inventory
 {
     public class InventoryManager : MonoBehaviour
     {
-        [SerializeField] private InventoryUI inventoryUI;
+        [Header("Inventory UI & Audio")]
+        [SerializeField] private InventoryUI inventoryUI; // Referência ao script de UI do inventário
+        [SerializeField] private AudioClip dropClip; // Som de quando um item é descartado
+        [SerializeField] private AudioSource audioSource; // Componente de áudio para tocar sons do inventário
 
-        [SerializeField] private InventorySO inventoryData;
-
-        public int inventorySize = 5;
-
-        public List<InventoryItem> initialItems = new List<InventoryItem>();
-
-        [SerializeField]
-        private AudioClip dropClip;
-
-        [SerializeField]
-        private AudioSource audioSource;
+        [Header("Inventory Data")]
+        [SerializeField] private InventorySO inventoryData; // ScriptableObject que armazena os dados do inventário
+        [SerializeField] private int inventorySize = 5; // Tamanho máximo do inventário
+        [SerializeField] private List<InventoryItem> initialItems; // Itens iniciais do inventário
 
         private void Start()
         {
-            PrepareUI();
-            PrepareInventoryData();
+            PrepareUI(); // Configura a interface do inventário
+            PrepareInventoryData(); // Inicializa os dados do inventário
         }
 
         private void PrepareInventoryData()
         {
-            inventoryData.Initialize();
-            inventoryData.OnInventoryUpdated += UpdateInventoryUI;
+            inventoryData.Initialize(); // Reseta os dados do inventário
+            inventoryData.OnInventoryUpdated += UpdateInventoryUI; // Atualiza UI sempre que o inventário muda
+
+            // Adiciona os itens iniciais ao inventário, se existirem
             foreach (InventoryItem item in initialItems)
             {
-                if (item.IsEmpty)
-                    continue;
+                if (item.IsEmpty) continue; // Ignora itens vazios
                 inventoryData.AddItem(item);
             }
         }
 
         private void UpdateInventoryUI(Dictionary<int, InventoryItem> inventoryState)
         {
-            inventoryUI.ResetAllItems();
+            inventoryUI.ResetAllItems(); // Limpa todos os itens visuais da UI
+
+            // Atualiza os slots com os itens e suas quantidades
             foreach (var item in inventoryState)
             {
                 inventoryUI.UpdateData(item.Key, item.Value.item.ItemImage, item.Value.quantity);
-
             }
         }
 
         private void PrepareUI()
         {
-            inventoryUI.IniciaUIInventory(inventoryData.Size);
+            inventoryUI.IniciaUIInventory(inventoryData.Size); // Inicializa a interface do inventário
+
+            // Conecta eventos da UI com as funções correspondentes no script
             inventoryUI.OnDescriptionRequested += HandleDescriptionRequest;
             inventoryUI.OnSwapItems += HandleSwapItems;
             inventoryUI.OnStartDragging += HandleDragging;
@@ -64,65 +64,62 @@ namespace Inventory
         private void HandleItemActionRequest(int itemIndex)
         {
             InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
-            if (inventoryItem.IsEmpty)
-                return;
+            if (inventoryItem.IsEmpty) return; // Se o slot está vazio, não faz nada
 
             IItemAction itemAction = inventoryItem.item as IItemAction;
             if (itemAction != null)
             {
-
-                inventoryUI.ShowItemAction(itemIndex);
-                inventoryUI.AddAction(itemAction.ActionName, () => PerformAction(itemIndex));
+                inventoryUI.ShowItemAction(itemIndex); // Exibe as opções de ação para o item
+                inventoryUI.AddAction(itemAction.ActionName, () => PerformAction(itemIndex)); // Adiciona ação à UI
             }
 
             IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
             if (destroyableItem != null)
             {
-                inventoryUI.AddAction("Drop", () => DropItem(itemIndex, inventoryItem.quantity));
+                inventoryUI.AddAction("Drop", () => DropItem(itemIndex, inventoryItem.quantity)); // Adiciona opção de descarte
             }
 
         }
 
         private void DropItem(int itemIndex, int quantity)
         {
-            inventoryData.RemoveItem(itemIndex, quantity);
-            inventoryUI.ResetSelection();
-            audioSource.PlayOneShot(dropClip);
+            inventoryData.RemoveItem(itemIndex, quantity); // Remove item do inventário
+            inventoryUI.ResetSelection(); // Reseta a seleção da UI
+            audioSource.PlayOneShot(dropClip); // Toca som de descarte
         }
 
         public void PerformAction(int itemIndex)
         {
             InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
-            if (inventoryItem.IsEmpty)
-                return;
+            if (inventoryItem.IsEmpty) return; // Se o slot está vazio, não faz nada
 
             IDestroyableItem destroyableItem = inventoryItem.item as IDestroyableItem;
             if (destroyableItem != null)
             {
-                inventoryData.RemoveItem(itemIndex, 1);
+                inventoryData.RemoveItem(itemIndex, 1); // Remove uma unidade do item do inventário
             }
 
             IItemAction itemAction = inventoryItem.item as IItemAction;
             if (itemAction != null)
             {
-                itemAction.PerformAction(gameObject, inventoryItem.itemState);
-                audioSource.PlayOneShot(itemAction.actionSFX);
+                itemAction.PerformAction(gameObject, inventoryItem.itemState); // Executa a ação do item
+                audioSource.PlayOneShot(itemAction.actionSFX); // Toca som da ação
+
                 if (inventoryData.GetItemAt(itemIndex).IsEmpty)
-                    inventoryUI.ResetSelection();
+                    inventoryUI.ResetSelection(); // Se o item foi consumido, reseta seleção
             }
         }
 
         private void HandleDragging(int itemIndex)
         {
             InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
-            if (inventoryItem.IsEmpty)
-                return;
-            inventoryUI.CreateDraggedItem(inventoryItem.item.ItemImage, inventoryItem.quantity);
+            if (inventoryItem.IsEmpty) return; // Se o slot está vazio, não faz nada
+            inventoryUI.CreateDraggedItem(inventoryItem.item.ItemImage, inventoryItem.quantity); // Cria o ícone do item arrastado
         }
 
         private void HandleSwapItems(int itemIndex_1, int itemIndex_2)
         {
-            inventoryData.SwapItems(itemIndex_1, itemIndex_2);
+            inventoryData.SwapItems(itemIndex_1, itemIndex_2); // Troca os itens de posição no inventário
         }
 
         private void HandleDescriptionRequest(int itemIndex)
@@ -130,13 +127,13 @@ namespace Inventory
             InventoryItem inventoryItem = inventoryData.GetItemAt(itemIndex);
             if (inventoryItem.IsEmpty)
             {
-                inventoryUI.ResetSelection();
+                inventoryUI.ResetSelection(); // Se o slot está vazio, reseta a seleção na UI
                 return;
             }
 
             ItemSO item = inventoryItem.item;
-            string description = PrepareDescription(inventoryItem);
-            inventoryUI.UpdateDescription(itemIndex, item.ItemImage, item.name, description);
+            string description = PrepareDescription(inventoryItem); // Obtém a descrição do item
+            inventoryUI.UpdateDescription(itemIndex, item.ItemImage, item.name, description); // Atualiza UI com descrição
         }
 
         private string PrepareDescription(InventoryItem inventoryItem)

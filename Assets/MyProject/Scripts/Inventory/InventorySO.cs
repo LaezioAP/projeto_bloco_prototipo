@@ -7,17 +7,19 @@ using UnityEngine.U2D;
 
 namespace Inventory.Model 
 {
+    // Define um ScriptableObject para representar um inventário
     [CreateAssetMenu]
     public class InventorySO : ScriptableObject
     {
         [SerializeField]
-        private List<InventoryItem> inventoryItems;
+        private List<InventoryItem> inventoryItems; // Lista de itens do inventário
 
         [field: SerializeField]
-        public int Size { get; private set; } = 10;
+        public int Size { get; private set; } = 10; // Define o tamanho do inventário
 
-        public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated;
+        public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated; // Evento para notificar mudanças no inventário
 
+        // Inicializa o inventário preenchendo com itens vazios
         public void Initialize()
         {
             inventoryItems = new List<InventoryItem>();
@@ -26,7 +28,7 @@ namespace Inventory.Model
                 inventoryItems.Add(InventoryItem.GetEmptyItem());
             }
         }
-
+        // Adiciona um item ao inventário e retorna a quantidade restante que não coube
         public int AddItem(ItemSO item, int quantity, List<ItemParameter> itemState = null)
         {
             if (item.IsStackable == false)
@@ -46,6 +48,7 @@ namespace Inventory.Model
             return quantity;
         }
 
+        // Adiciona um item na primeira posição vazia do inventário
         private int AddItemOfFirstFreeSlot(ItemSO item, int quantity, List<ItemParameter> itemState = null)
         {
             InventoryItem newItem = new InventoryItem
@@ -66,9 +69,11 @@ namespace Inventory.Model
             return 0;
         }
 
+        // Verifica se o inventário está cheio
         private bool isInventoryFull()
             => inventoryItems.Where(item => item.IsEmpty).Any() == false;
 
+        // Adiciona um item empilhável ao inventário
         private int AddStackableItem(ItemSO item, int quantity)
         {
             for (int i = 0; i < inventoryItems.Count; i++) 
@@ -104,6 +109,7 @@ namespace Inventory.Model
             return quantity;
         }
 
+        // Retorna o estado atual do inventário como um dicionário
         public Dictionary<int, InventoryItem> GetCurrentInventoryState()
         {
             Dictionary<int, InventoryItem> returnValue = new Dictionary<int, InventoryItem>();
@@ -116,6 +122,8 @@ namespace Inventory.Model
             return returnValue;
         }
 
+
+        // Retorna o item em um índice específico
         public InventoryItem GetItemAt(int itemIndex)
         {
             return inventoryItems[itemIndex];
@@ -126,6 +134,7 @@ namespace Inventory.Model
             AddItem(item.item, item.quantity);
         }
 
+        // Troca a posição de dois itens no inventário
         public void SwapItems(int itemIndex_1, int itemIndex_2)
         {
             InventoryItem item1 = inventoryItems[itemIndex_1];
@@ -134,6 +143,7 @@ namespace Inventory.Model
             InformAboutChange();
         }
 
+        // Notifica mudanças no inventário
         private void InformAboutChange()
         {
             OnInventoryUpdated?.Invoke(GetCurrentInventoryState());
@@ -167,6 +177,8 @@ namespace Inventory.Model
 
         public bool IsEmpty => item == null;
 
+
+        // Retorna uma nova instância do item com uma quantidade modificada
         public InventoryItem ChangeQuantity(int newQuantity)
         {
             return new InventoryItem
@@ -176,7 +188,7 @@ namespace Inventory.Model
                 itemState = new List<ItemParameter>(this.itemState)
             };
         }
-
+        // Retorna um item vazio (sem item, quantidade 0)
         public static InventoryItem GetEmptyItem() => new InventoryItem
         {
             item = null,
