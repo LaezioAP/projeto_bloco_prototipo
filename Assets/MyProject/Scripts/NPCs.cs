@@ -11,7 +11,7 @@ public class NPCs : MonoBehaviour
     [SerializeField] private Transform iconPosition; // Posição manual do ícone
 
 
-    private void Start()
+    protected virtual void Start()
     {
         if (interactionIcon != null)
             interactionIcon.gameObject.SetActive(false); // O ícone começa desativado
@@ -43,6 +43,12 @@ public class NPCs : MonoBehaviour
             Debug.Log("Diálogo iniciado!");
             GameEvents.Instance.StartDialogue(dialogueData);
         }
+    }
+
+    protected virtual void OnPlayerInteract()
+    {
+        // Este método pode ser sobrescrito nas classes filhas
+        Debug.Log("Interação padrão com NPC.");
     }
 
     private void ShowInteractionIcon()
