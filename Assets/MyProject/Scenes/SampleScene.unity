@@ -8505,6 +8505,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpWindow: {fileID: 1276718738}
+--- !u!114 &572202538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572202527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eaa737f1452b9c4280516e21de25167, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueData: {fileID: 11400000, guid: d9253b4a2ae4a5f40a9be809922e2bef, type: 2}
+  interactionIcon: {fileID: 1495994190}
+  iconPosition: {fileID: 1819639289}
+  popUpObject: {fileID: 572202537}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -9031,6 +9047,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3520004600614599217, guid: 03ad3590466d68743962211d8539f15e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3520004600614599217, guid: 03ad3590466d68743962211d8539f15e, type: 3}
       propertyPath: dialogueData
       value: 
       objectReference: {fileID: 11400000, guid: d9253b4a2ae4a5f40a9be809922e2bef, type: 2}
@@ -9060,6 +9080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6735561942402833260, guid: 03ad3590466d68743962211d8539f15e, type: 3}
+    - {fileID: 3520004600614599217, guid: 03ad3590466d68743962211d8539f15e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2468402016501585392, guid: 03ad3590466d68743962211d8539f15e, type: 3}
@@ -9075,6 +9096,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3795848813990556738, guid: 03ad3590466d68743962211d8539f15e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 572202537}
+    - targetCorrespondingSourceObject: {fileID: 3795848813990556738, guid: 03ad3590466d68743962211d8539f15e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 572202538}
   m_SourcePrefab: {fileID: 100100000, guid: 03ad3590466d68743962211d8539f15e, type: 3}
 --- !u!1 &1035039441
 GameObject:
@@ -199630,7 +199654,6 @@ GameObject:
   - component: {fileID: 1697264332}
   - component: {fileID: 1697264333}
   - component: {fileID: 1697264334}
-  - component: {fileID: 1697264335}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -199954,18 +199977,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialMessage: "Use a tecla de espa\xE7o para avan\xE7ar nos di\xE1logos."
   tutorialText: {fileID: 339830786}
---- !u!114 &1697264335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1697264321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc2c5f99941b3ac41a0323af53572bfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1715016899
 PrefabInstance:
   m_ObjectHideFlags: 0

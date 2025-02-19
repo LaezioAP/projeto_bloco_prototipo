@@ -15,6 +15,7 @@ public class NPCs : MonoBehaviour
     {
         if (interactionIcon != null)
             interactionIcon.gameObject.SetActive(false); // O ícone começa desativado
+        //GameEvents.Instance.OnFinishDialogue += DialogueEnded;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -42,7 +43,14 @@ public class NPCs : MonoBehaviour
         {
             Debug.Log("Diálogo iniciado!");
             GameEvents.Instance.StartDialogue(dialogueData);
+            GameEvents.Instance.OnFinishDialogue += DialogueEnded; // O NPC escuta quando o diálogo termina
         }
+    }
+
+    protected virtual void DialogueEnded()
+    {
+        Debug.Log("Diálogo finalizado!");
+        GameEvents.Instance.OnFinishDialogue -= DialogueEnded; // Remove para evitar chamadas duplicadas
     }
 
     protected virtual void OnPlayerInteract()
