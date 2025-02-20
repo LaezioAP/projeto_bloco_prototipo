@@ -8521,6 +8521,12 @@ MonoBehaviour:
   interactionIcon: {fileID: 1495994190}
   iconPosition: {fileID: 1819639289}
   popUpObject: {fileID: 572202537}
+  playerInventory: {fileID: 11400000, guid: 2a7013415567d824c8416fc46134cc5b, type: 2}
+  chaveArmarinho: {fileID: 11400000, guid: 106b134baef051d4a870bf9cd1d47a5e, type: 2}
+  recompensa: {fileID: 11400000, guid: bc59e475be4b89c4fa4b82da1477ba27, type: 2}
+  quantidadeRecompensa: 1
+  posRecompensa: {fileID: 11400000, guid: d2cf08b254491d549adbb2c11b83ab56, type: 2}
+  interacaoPosRecompensa: {fileID: 11400000, guid: e352f2294fd16854bb0c940bee6b1ee9, type: 2}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

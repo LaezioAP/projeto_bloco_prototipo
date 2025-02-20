@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class NPCs : MonoBehaviour
 {
-    [SerializeField] private DialogueDataSO dialogueData;
+    [SerializeField] public DialogueDataSO dialogueData;
     private bool isPlayerNearby = false;
     [SerializeField] private Image interactionIcon; // Ícone da tecla "E"
     [SerializeField] private Transform iconPosition; // Posição manual do ícone
