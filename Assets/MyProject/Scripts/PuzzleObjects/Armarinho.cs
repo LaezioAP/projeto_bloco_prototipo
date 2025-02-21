@@ -13,21 +13,17 @@ public class Armarinho : NPCs
     [SerializeField] private DialogueDataSO posRecompensa;
     [SerializeField] private DialogueDataSO interacaoPosRecompensa;
     private bool popUpAtivado = false;
+    private bool armarinhoAberto = false; // Impede que o pop-up apareça após abrir o armarinho
 
     protected override void DialogueEnded()
     {
         base.DialogueEnded();
+        if (armarinhoAberto) return;
 
         if (!popUpAtivado && popUpObject != null)
         {
             // Modificar o diálogo antes do pop-up baseado na verificação da chave
-            int chaveIndex = EncontrarItemNoInventario(recompensa);
-            if (chaveIndex != -1)
-            {
-                // O jogador possui a chave
-                dialogueData = interacaoPosRecompensa;  // Mudar o diálogo para o de recompensa
-
-            }
+            int chaveIndex = EncontrarItemNoInventario(chaveArmarinho);
             
             popUpObject.TriggerPopUp("Usar a chave?",
             () => TentarAbrirArmarinho(),
@@ -46,6 +42,8 @@ public class Armarinho : NPCs
             playerInventory.RemoveItem(chaveIndex, 5); // Remove uma unidade da chave
             playerInventory.AddItem(recompensa, quantidadeRecompensa);
             Debug.Log("Armarinho aberto! Você recebeu a recompensa.");
+            armarinhoAberto = true;
+            dialogueData = interacaoPosRecompensa;
             GameEvents.Instance.StartDialogue(posRecompensa);
             //GameEvents.Instance.OnFinishDialogue += DialogueEnded;
         }
