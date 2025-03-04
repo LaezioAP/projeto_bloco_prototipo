@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 LEFT = Vector3.left;
     private Vector3 RIGHT = Vector3.right;
     private Vector3 DOWN = Vector3.down;
+    private MyFieldOfView fieldOfView;
 
     public Animator animator;
 
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        fieldOfView = FindObjectOfType<MyFieldOfView>();
         rb = GetComponent<Rigidbody2D>();
         cam = Camera.main;
         GameEvents.Instance.OnStartDialogue += HandleStartDialogue;
@@ -46,6 +48,7 @@ public class PlayerController : MonoBehaviour
         DOWN = Vector3.down;
         LEFT = Vector3.left;
         RIGHT = Vector3.right;
+        isRotationEnabled = true;
         RotateToCamera();
     }
 
@@ -81,14 +84,20 @@ public class PlayerController : MonoBehaviour
         rb.transform.eulerAngles = Vector3.zero;
         isRotationEnabled = false;
     }
-    void RotateToCamera() 
+    void RotateToCamera()
     {
-        mousePos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z - cam.transform.position.z));
-        rb.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2((mousePos.y - transform.position.y), (mousePos.x - transform.position.x)) * Mathf.Rad2Deg);
-        isRotationEnabled = true;
+
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = (mousePos - transform.position).normalized;
+
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.eulerAngles = new Vector3(0, 0, angle);
+
+        // Atualiza a rotação do FOV também
+        FindObjectOfType<MyFieldOfView>().SetAimDirection(direction);
     }
 
-    void Movement()
+        void Movement()
     {
         //Adicionei aqui o moving inicalmente como false, como o movent é validado no update, sempre que a cada frame passar se o usuario não cliclou em nenhum tecla, o moving torna-se false, caso contrário vira true.
         moving = false;
