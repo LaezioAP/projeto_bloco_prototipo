@@ -1,14 +1,3 @@
-/* 
-    ------------------- Code Monkey -------------------
-
-    Thank you for downloading this package
-    I hope you find it useful in your projects
-    If you have any questions let me know
-    Cheers!
-
-               unitycodemonkey.com
-    --------------------------------------------------
- */
 
 using System.Collections;
 using System.Collections.Generic;
@@ -20,10 +9,12 @@ public class MyFieldOfView : MonoBehaviour
 
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private Transform player; // Referência ao Player
+    [SerializeField] private LayerMask visibilityLayerMask; // Camada para itens/NPCs visíveis apenas no FoV
     private Mesh mesh;
     private float fov;
     private float viewDistance;
     private float startingAngle;
+    private List<GameObject> visibleObjects; // Lista de objetos a verificar
 
     private void Start()
     {
@@ -31,16 +22,23 @@ public class MyFieldOfView : MonoBehaviour
         GetComponent<MeshFilter>().mesh = mesh;
         fov = 160f;
         viewDistance = 8f;
+        visibleObjects = new List<GameObject>();
 
         if (player == null)
         {
             Debug.LogError("Player não foi atribuído ao Field of View!");
         }
+
+        // Encontra todos os objetos com a tag "VisibleInFoV" (ou use outro critério)
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("ItenFov"))
+        {
+            visibleObjects.Add(obj);
+            Debug.Log("Objeto adicionado à lista: " + obj.name);
+        }
     }
 
     private void LateUpdate()
     {
-
         if (player != null)
         {
             transform.position = player.position; // FOV segue o Player
@@ -64,23 +62,19 @@ public class MyFieldOfView : MonoBehaviour
             RaycastHit2D raycastHit2D = Physics2D.Raycast(transform.position, UtilsClass.GetVectorFromAngle(angle), viewDistance, layerMask);
             if (raycastHit2D.collider == null)
             {
-                // No hit
                 vertex = transform.position + UtilsClass.GetVectorFromAngle(angle) * viewDistance;
             }
             else
             {
-                // Hit object
                 vertex = raycastHit2D.point;
             }
-            vertices[vertexIndex] = transform.InverseTransformPoint(vertex); // Corrigido para manter local ao Mesh
-
+            vertices[vertexIndex] = transform.InverseTransformPoint(vertex);
 
             if (i > 0)
             {
                 triangles[triangleIndex + 0] = 0;
                 triangles[triangleIndex + 1] = vertexIndex - 1;
                 triangles[triangleIndex + 2] = vertexIndex;
-
                 triangleIndex += 3;
             }
 
@@ -88,11 +82,46 @@ public class MyFieldOfView : MonoBehaviour
             angle -= angleIncrease;
         }
 
-
         mesh.vertices = vertices;
         mesh.uv = uv;
         mesh.triangles = triangles;
         mesh.bounds = new Bounds(Vector3.zero, Vector3.one * 100f);
+
+        // Atualiza a visibilidade dos objetos
+        UpdateObjectVisibility();
+    }
+
+    private void UpdateObjectVisibility()
+    {
+        foreach (GameObject obj in visibleObjects)
+        {
+            if (obj == null) continue;
+
+            Vector3 directionToObject = (obj.transform.position - transform.position).normalized;
+            float distanceToObject = Vector3.Distance(transform.position, obj.transform.position);
+            float angleToObject = Vector3.Angle(directionToObject, UtilsClass.GetVectorFromAngle(startingAngle - fov / 2f));
+
+            // Verifica se o objeto está dentro da distância e do ângulo do FoV
+            bool isInFoV = distanceToObject <= viewDistance && Mathf.Abs(angleToObject) <= fov / 2f;
+
+            if (isInFoV)
+            {
+                // Verifica se há obstáculos entre o jogador e o objeto
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, directionToObject, distanceToObject, layerMask);
+                if (hit.collider == null || hit.collider.gameObject == obj) // Sem obstáculos ou o objeto é o próprio alvo
+                {
+                    obj.SetActive(true); // Torna visível
+                }
+                else
+                {
+                    obj.SetActive(false); // Esconde se houver obstáculo
+                }
+            }
+            else
+            {
+                obj.SetActive(false); // Esconde se estiver fora do FoV
+            }
+        }
     }
 
     public void SetPlayer(Transform playerTransform)
@@ -108,7 +137,6 @@ public class MyFieldOfView : MonoBehaviour
     public void SetFoV(float fov)
     {
         this.fov = fov;
-
     }
 
     public void SetViewDistance(float viewDistance)

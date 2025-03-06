@@ -8,6 +8,8 @@ TagManager:
   - Player2
   - NPC
   - Parede
+  - 'VisibleInFoV  '
+  - ItenFov
   layers:
   - Default
   - TransparentFX
