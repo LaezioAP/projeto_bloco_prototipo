@@ -30,7 +30,6 @@ public class Armarinho : NPCs
             () => Debug.Log("O jogador recusou abrir o armarinho.")
         );
             
-            Debug.Log("Pop-up ativado após o diálogo!");
         }
     }
     public void TentarAbrirArmarinho()
@@ -41,7 +40,6 @@ public class Armarinho : NPCs
         {
             playerInventory.RemoveItem(chaveIndex, 5); // Remove uma unidade da chave
             playerInventory.AddItem(recompensa, quantidadeRecompensa);
-            Debug.Log("Armarinho aberto! Você recebeu a recompensa.");
             armarinhoAberto = true;
             dialogueData = interacaoPosRecompensa;
             GameEvents.Instance.StartDialogue(posRecompensa);
