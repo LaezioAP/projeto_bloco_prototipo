@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747e6eacf70b91b479f475991cdd4145, type: 3}
+  m_Name: DialogueTvLigada
+  m_EditorClassIdentifier: 
+  Sentences:
+  - ActorData: {fileID: 11400000, guid: c0bbdb15d1eced8429e64629c2da4012, type: 2}
+    content: "Na noite desta ter\xE7a-feira, foi encontrado morto o Sargento Oficial
+      da delegacia de Kansas City."
+  - ActorData: {fileID: 11400000, guid: c0bbdb15d1eced8429e64629c2da4012, type: 2}
+    content: "Sargento Bruce estava envolvido em esquemas de corrup\xE7\xE3o e lavagem
+      de dinheiro."
+  - ActorData: {fileID: 11400000, guid: c0bbdb15d1eced8429e64629c2da4012, type: 2}
+    content: "Investiga\xE7\xF5es iniciais indicam que a raz\xE3o do crime foi um
+      \"Cala boca\""
+  - ActorData: {fileID: 11400000, guid: c0bbdb15d1eced8429e64629c2da4012, type: 2}
+    content: Ele deixa esposa e duas filhas, de 8 e 16 anos.
+  - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
+    content: "J\xE1 vi este homem quando fui no trabalho do papai."
+  - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
+    content: "Que not\xEDcia terr\xEDvel."
