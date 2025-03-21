@@ -44,6 +44,7 @@ public class PlayerMoviment : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        movement.Normalize();
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }

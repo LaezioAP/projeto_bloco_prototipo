@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3c0788339a09484da722a1e3d305bb4, type: 3}
+  m_Name: Carta
+  m_EditorClassIdentifier: 
+  <IsStackable>k__BackingField: 0
+  <MaxStackSize>k__BackingField: 1
+  <Name>k__BackingField: Carta secreta
+  <Description>k__BackingField: "Uma carta propositalmente deixada aqui pelo meu
+    irm\xE3o. Talvez uma charada"
+  <ItemImage>k__BackingField: {fileID: 21300000, guid: c0f5563f94d84ab458aaa6d9a4ab301e, type: 3}
+  <DefaultParametersList>k__BackingField: []
+  modifiersData: []
