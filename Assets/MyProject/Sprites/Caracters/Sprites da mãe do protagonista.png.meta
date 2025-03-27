@@ -1,0 +1,875 @@
+fileFormatVersion: 2
+guid: 20407f727f3cba44ca885e180cc56591
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_0"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 437
+        width: 57
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950677d871631f441a23b90edcb40f0f
+      internalID: 85732994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_1"
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 453
+        width: 70
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fdafc2bc07d3a43993a1e888e3e0bd
+      internalID: 2023180637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_2"
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 434
+        width: 70
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad65e794a3256ca4c86ad880df4f8d01
+      internalID: -1736399287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_3"
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 437
+        width: 57
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0ba771e8dcff742bc94ba9debe2176
+      internalID: -1356282253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_4"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 474
+        width: 64
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b3529db168885459e28bde8bee41a7
+      internalID: -858695560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_5"
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 459
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3d7b6ef0fb8094aa7162ba52ae7ec6
+      internalID: 2098639036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_6"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 357
+        width: 57
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0a8ca038135e64592e7817f3b15609
+      internalID: 544757254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_7"
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 373
+        width: 70
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c521317c6f0f54c9424a972a06760a
+      internalID: 2036305976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_8"
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 354
+        width: 70
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27e9f807fc644ad439d7dce822c229ef
+      internalID: -1045533432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_9"
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 357
+        width: 57
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa780391f43e08f41b4fd6af888e9aa4
+      internalID: 954259024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_10"
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 384
+        width: 36
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33dca19d72d6a044a7e3cbefc8e4f53
+      internalID: -242082256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_11"
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 384
+        width: 51
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823dd79fe4b787549900bf8e28bdc62e
+      internalID: -121043415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_12"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 280
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15ba0411b106984ca6de57732ecd786
+      internalID: 1588667089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_13"
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 293
+        width: 67
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c253ef9a20a724587b414261418a1c
+      internalID: -327821569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_14"
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 274
+        width: 67
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943c83e38cae5a94fb78855e51f86905
+      internalID: -1840710981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_15"
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 281
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6234b1bb256eb1442951635b5b8b8e1a
+      internalID: -1231231693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_16"
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 304
+        width: 36
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dd2082a194cd740a79adce71140953
+      internalID: -1247355415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_17"
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 304
+        width: 51
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf0d6acccf07114c87f7b72e79b6153
+      internalID: -1286202937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_18"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 197
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2c6b61009507547b52f49945f435e2
+      internalID: -1416573463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_19"
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 213
+        width: 67
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39ffa8aa27be9b4abb23bcb3fa2135e
+      internalID: 95810176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_20"
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 194
+        width: 67
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d3a82b948b4d0468fb103437833866
+      internalID: 1503474067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_21"
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 197
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3289423d194b8e42b5548117006b9e3
+      internalID: 663686575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_22"
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 242
+        width: 64
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1a0b7166064974fa0a49d7a5e8df55
+      internalID: -686608355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_23"
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 242
+        width: 64
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9944fcaa0ba802843a283332c087ea6d
+      internalID: -1049837786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_24"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 117
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5feab1bea438542baa2ecd96fdc4b3
+      internalID: -1394925253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_25"
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 133
+        width: 67
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d998191234f08d44aa0e3f0c769ad35b
+      internalID: -955628257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_26"
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 114
+        width: 67
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ca54411aed7d14287b934fde7c109d
+      internalID: 722133300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_27"
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 119
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bf276030b45cb49bb2ebd9fb313176
+      internalID: -1871965749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_28"
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 91
+        width: 70
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fa5b3cee3cffb449a6493b557eafd1
+      internalID: 1285140497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_29"
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 84
+        width: 106
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31eac714656a77949a3dff189242e3f4
+      internalID: -1903094883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_30"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 37
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9303cd91b5d7bee42ac7733c3944ab9b
+      internalID: -2043637465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_31"
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 53
+        width: 67
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcba19d605183d04b80c0d6528771db5
+      internalID: -734069574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_32"
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 34
+        width: 67
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36256b37358d73e4fade2451df67b293
+      internalID: -1602776814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites da m\xE3e do protagonista_33"
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 40
+        width: 57
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d62609d0c5244d49a9a202a933cf8c7
+      internalID: 1799383555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      "Sprites da m\xE3e do protagonista_0": 85732994
+      "Sprites da m\xE3e do protagonista_1": 2023180637
+      "Sprites da m\xE3e do protagonista_10": -242082256
+      "Sprites da m\xE3e do protagonista_11": -121043415
+      "Sprites da m\xE3e do protagonista_12": 1588667089
+      "Sprites da m\xE3e do protagonista_13": -327821569
+      "Sprites da m\xE3e do protagonista_14": -1840710981
+      "Sprites da m\xE3e do protagonista_15": -1231231693
+      "Sprites da m\xE3e do protagonista_16": -1247355415
+      "Sprites da m\xE3e do protagonista_17": -1286202937
+      "Sprites da m\xE3e do protagonista_18": -1416573463
+      "Sprites da m\xE3e do protagonista_19": 95810176
+      "Sprites da m\xE3e do protagonista_2": -1736399287
+      "Sprites da m\xE3e do protagonista_20": 1503474067
+      "Sprites da m\xE3e do protagonista_21": 663686575
+      "Sprites da m\xE3e do protagonista_22": -686608355
+      "Sprites da m\xE3e do protagonista_23": -1049837786
+      "Sprites da m\xE3e do protagonista_24": -1394925253
+      "Sprites da m\xE3e do protagonista_25": -955628257
+      "Sprites da m\xE3e do protagonista_26": 722133300
+      "Sprites da m\xE3e do protagonista_27": -1871965749
+      "Sprites da m\xE3e do protagonista_28": 1285140497
+      "Sprites da m\xE3e do protagonista_29": -1903094883
+      "Sprites da m\xE3e do protagonista_3": -1356282253
+      "Sprites da m\xE3e do protagonista_30": -2043637465
+      "Sprites da m\xE3e do protagonista_31": -734069574
+      "Sprites da m\xE3e do protagonista_32": -1602776814
+      "Sprites da m\xE3e do protagonista_33": 1799383555
+      "Sprites da m\xE3e do protagonista_4": -858695560
+      "Sprites da m\xE3e do protagonista_5": 2098639036
+      "Sprites da m\xE3e do protagonista_6": 544757254
+      "Sprites da m\xE3e do protagonista_7": 2036305976
+      "Sprites da m\xE3e do protagonista_8": -1045533432
+      "Sprites da m\xE3e do protagonista_9": 954259024
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
