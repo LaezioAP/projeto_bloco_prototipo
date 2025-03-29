@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class DoorController : MonoBehaviour
 {
     [SerializeField] float rotationSpeed = 5f; // Velocidade da rotação da porta
@@ -11,15 +12,20 @@ public class DoorController : MonoBehaviour
     private Quaternion targetRotation; // Guarda a rotação alvo da porta
     private Transform player; // Referência ao jogador
 
+    [Header("UI Elements")]
     [SerializeField] private Image interactionIcon; // Ícone da tecla "E"
     [SerializeField] private Transform iconPosition; // Posição manual do ícone
 
-    
+    [Header("Audio Settings")]
+    [SerializeField] private AudioSource doorAudioSource; // ?? Componente de som da porta
+    [SerializeField] private AudioClip openSound; // ?? Som ao abrir a porta
+    [SerializeField] private AudioClip closeSound; // ?? Som ao fechar a porta
 
     void Start()
     {
         // Define a posição inicial da porta como fechada
         targetRotation = transform.rotation;
+
         if (interactionIcon != null)
             interactionIcon.gameObject.SetActive(false);
     }
@@ -67,6 +73,10 @@ public class DoorController : MonoBehaviour
         float angle = Vector3.Dot(transform.right, direction) > 0 ? 90f : -90f;
         targetRotation = Quaternion.Euler(0, 0, angle); // Define o ângulo aberto
 
+        // ?? Toca o som de abrir porta
+        if (doorAudioSource != null && openSound != null)
+            doorAudioSource.PlayOneShot(openSound);
+
         // Agendar o fechamento automático da porta após "autoCloseTime" segundos
         Invoke("CloseDoor", autoCloseTime);
     }
@@ -75,6 +85,10 @@ public class DoorController : MonoBehaviour
     {
         isOpen = false;
         targetRotation = Quaternion.Euler(0, 0, 0); // Define o ângulo fechado
+
+        // ?? Toca o som de fechar porta
+        if (doorAudioSource != null && closeSound != null)
+            doorAudioSource.PlayOneShot(closeSound);
     }
 
     private void ShowInteractionIcon()

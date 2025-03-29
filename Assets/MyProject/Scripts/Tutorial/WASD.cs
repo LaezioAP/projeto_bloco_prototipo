@@ -11,6 +11,7 @@ public class WASD : MonoBehaviour
     public string tutorialMessage; // Mensagem de tutorial para exibir
 
     [Header("UI Reference")]
+    public GameObject tutorialPanel; // ?? Painel que contém o texto
     public TextMeshProUGUI tutorialText; // Referência ao tutorial
     [SerializeField] private Image interactionIcon; // Ícone da tecla "E"
     [SerializeField] private Transform iconPosition; // Posição manual do ícone
@@ -23,6 +24,9 @@ public class WASD : MonoBehaviour
     {
         if (interactionIcon != null)
             interactionIcon.gameObject.SetActive(false); // O ícone começa desativado
+
+        if (tutorialPanel != null)
+            tutorialPanel.SetActive(false); // ?? Painel começa desativado
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -60,23 +64,30 @@ public class WASD : MonoBehaviour
 
     private void DisplayMessage()
     {
+        if (tutorialPanel != null)
+            tutorialPanel.SetActive(true); // ?? Ativa o painel antes de mostrar o texto
+
         if (tutorialText != null)
         {
             tutorialText.text = tutorialMessage;
             tutorialText.gameObject.SetActive(true);
+
             if (currentCoroutine != null)
                 StopCoroutine(currentCoroutine);
 
-            // Inicia uma nova contagem regressiva
-            currentCoroutine = StartCoroutine(HideMessageAfterTime(5f)); // Oculta o tutorial após 3 segundos
+            currentCoroutine = StartCoroutine(HideMessageAfterTime(5f)); // Oculta o tutorial após 5 segundos
         }
     }
 
     private IEnumerator HideMessageAfterTime(float delay)
     {
         yield return new WaitForSeconds(delay);
+
         if (tutorialText != null)
             tutorialText.gameObject.SetActive(false);
+
+        if (tutorialPanel != null)
+            tutorialPanel.SetActive(false); // ?? Desativa o painel junto com o texto
     }
 
     private void ShowInteractionIcon()

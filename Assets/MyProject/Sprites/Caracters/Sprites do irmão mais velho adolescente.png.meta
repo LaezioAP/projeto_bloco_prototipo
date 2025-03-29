@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,679 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_0"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 449
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b59d9865466e1940b55b8554921ca3e
+      internalID: 855157212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_1"
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 457
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5148a22cde0debc4ea8d0c58894a99df
+      internalID: 1002061538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_2"
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 450
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4a002f1b3aa29b4a94e5d3bf0d5e248
+      internalID: 320332501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_3"
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 449
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0ce106a87fbde4d9f80f5a011b781a
+      internalID: -2083152033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_4"
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 478
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c0d15d1f82d6c45becbbd9b10f7660
+      internalID: -1527376295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_5"
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 465
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34087b779b241d349aa55b296eddd3c6
+      internalID: -1307416123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_6"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 369
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c608b03f71642d4da6f34499c733584
+      internalID: -1792128491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_7"
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 377
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbea6dfd1ac396146b7346fb599134ae
+      internalID: -1375960795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_8"
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 370
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 102093747e6710c4eaae627bd28ee2c1
+      internalID: 1774829425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_9"
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 369
+        width: 53
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d37227aa8c6808247a3080ca142a00e5
+      internalID: -283364685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_10"
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 392
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3812f1c81f9734fb209bec5d722991
+      internalID: -2124004555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_11"
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 392
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce0e0cb64d3611e45b3ac4d0b38b3b33
+      internalID: 812140578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_12"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 296
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e0b9aea4b86a447bc8670fa0ff5f68
+      internalID: -674039189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_13"
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 297
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 410b5c1e71f756347acdf76b4f7022f7
+      internalID: -762013596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_14"
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 290
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8489aeb3aeb8c1429e048b2e9764aa3
+      internalID: 1690404281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_15"
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 289
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42009155a0b599f458ea6aa50a12bbe7
+      internalID: -273464889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_16"
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 312
+        width: 32
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d8ec0103ec0034a9cad362c7c9094e
+      internalID: 362471414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_17"
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 312
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e026fbccf430daa4482b80baedaa574e
+      internalID: 1119362931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_18"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 209
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4f68babb1ac304ca1ca1b24e65d4cb
+      internalID: -1491703556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_19"
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 217
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2e99bf9dfeb174389d6a5d1dd79eb5
+      internalID: -1695409610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_20"
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 210
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798ff092d0b054c4fbb0593e07209394
+      internalID: 1541133293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_21"
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 216
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e3c5b561fcfc241b3ac9ff452b0e51
+      internalID: -1797210244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_22"
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 242
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e5b83b77584284588544c502f5eb0e
+      internalID: -2119015738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_23"
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 242
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4affdc46bc9ee85438bf2d6d21eec47f
+      internalID: -1142683710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_24"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 136
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0718f75fb652e204f8a2f5034b79d2ac
+      internalID: 738911076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_25"
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 137
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5798dcfffc065c8428362bd33a43c28b
+      internalID: -193203593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_26"
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 130
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92cea41a825d14c4f8b97eea61df1ac1
+      internalID: 117503368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_27"
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 129
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a99521565b09944b8ebe155deb8ac5e
+      internalID: 1954677047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_28"
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 49
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49095732df8069e44946c17db1225021
+      internalID: -1023567386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_29"
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 57
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf190b62c5dd73d4d830ba635c7a7c94
+      internalID: -1860205700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_30"
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 50
+        width: 55
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a0372824b84cf40b2939302047cbfa
+      internalID: 1402291939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Sprites do irm\xE3o mais velho adolescente_31"
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 56
+        width: 53
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0fc9c66304a9bb4eae959dfb6cf41f0
+      internalID: 1039195768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +791,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Sprites do irm\xE3o mais velho adolescente_0": 855157212
+      "Sprites do irm\xE3o mais velho adolescente_1": 1002061538
+      "Sprites do irm\xE3o mais velho adolescente_10": -2124004555
+      "Sprites do irm\xE3o mais velho adolescente_11": 812140578
+      "Sprites do irm\xE3o mais velho adolescente_12": -674039189
+      "Sprites do irm\xE3o mais velho adolescente_13": -762013596
+      "Sprites do irm\xE3o mais velho adolescente_14": 1690404281
+      "Sprites do irm\xE3o mais velho adolescente_15": -273464889
+      "Sprites do irm\xE3o mais velho adolescente_16": 362471414
+      "Sprites do irm\xE3o mais velho adolescente_17": 1119362931
+      "Sprites do irm\xE3o mais velho adolescente_18": -1491703556
+      "Sprites do irm\xE3o mais velho adolescente_19": -1695409610
+      "Sprites do irm\xE3o mais velho adolescente_2": 320332501
+      "Sprites do irm\xE3o mais velho adolescente_20": 1541133293
+      "Sprites do irm\xE3o mais velho adolescente_21": -1797210244
+      "Sprites do irm\xE3o mais velho adolescente_22": -2119015738
+      "Sprites do irm\xE3o mais velho adolescente_23": -1142683710
+      "Sprites do irm\xE3o mais velho adolescente_24": 738911076
+      "Sprites do irm\xE3o mais velho adolescente_25": -193203593
+      "Sprites do irm\xE3o mais velho adolescente_26": 117503368
+      "Sprites do irm\xE3o mais velho adolescente_27": 1954677047
+      "Sprites do irm\xE3o mais velho adolescente_28": -1023567386
+      "Sprites do irm\xE3o mais velho adolescente_29": -1860205700
+      "Sprites do irm\xE3o mais velho adolescente_3": -2083152033
+      "Sprites do irm\xE3o mais velho adolescente_30": 1402291939
+      "Sprites do irm\xE3o mais velho adolescente_31": 1039195768
+      "Sprites do irm\xE3o mais velho adolescente_4": -1527376295
+      "Sprites do irm\xE3o mais velho adolescente_5": -1307416123
+      "Sprites do irm\xE3o mais velho adolescente_6": -1792128491
+      "Sprites do irm\xE3o mais velho adolescente_7": -1375960795
+      "Sprites do irm\xE3o mais velho adolescente_8": 1774829425
+      "Sprites do irm\xE3o mais velho adolescente_9": -283364685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
