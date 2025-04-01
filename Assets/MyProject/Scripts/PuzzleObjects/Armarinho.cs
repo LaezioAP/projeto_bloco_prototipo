@@ -25,7 +25,7 @@ public class Armarinho : NPCs
             // Modificar o diálogo antes do pop-up baseado na verificação da chave
             int chaveIndex = EncontrarItemNoInventario(chaveArmarinho);
             
-            popUpObject.TriggerPopUp("Usar a pilha?",
+            popUpObject.TriggerPopUp("Usar a chave?",
             () => TentarAbrirArmarinho(),
             () => Debug.Log("O jogador recusou abrir o armarinho.")
         );
@@ -48,7 +48,7 @@ public class Armarinho : NPCs
         else
         {
 
-            popUpObject.TriggerPopUp("Você não possui a pilha",
+            popUpObject.TriggerPopUp("Você não possui a chave",
            () => ClosePopUp(),
            () => Debug.Log("O jogador recusou abrir o armarinho."));
         }

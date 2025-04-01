@@ -34,7 +34,7 @@ public class EventTutorial : MonoBehaviour
                 StopCoroutine(currentCoroutine);
 
             // Inicia uma nova contagem regressiva
-            currentCoroutine = StartCoroutine(HideMessageAfterTime(3f));
+            currentCoroutine = StartCoroutine(HideMessageAfterTime(5f));
         }
     }
 
