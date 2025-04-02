@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         {
             RotateToCamera();
         }
-        else 
+        else
         {
             StopCamera();
         }
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void StopCamera() 
+    void StopCamera()
     {
         rb.transform.eulerAngles = Vector3.zero;
         isRotationEnabled = false;
@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
         FindObjectOfType<MyFieldOfView>().SetAimDirection(direction);
     }
 
-        void Movement()
+    void Movement()
     {
         //Adicionei aqui o moving inicalmente como false, como o movent é validado no update, sempre que a cada frame passar se o usuario não cliclou em nenhum tecla, o moving torna-se false, caso contrário vira true.
         moving = false;
