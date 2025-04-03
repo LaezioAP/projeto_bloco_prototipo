@@ -5,23 +5,24 @@ using System.Collections;
 
 public class SceneFader : MonoBehaviour
 {
-    public Image fadeImage; // Referência ao painel de fade
-    public float fadeDuration = 1f; // Duração do fade em segundos
+    public Image fadeImage;
+    public float fadeDuration = 1f;
 
     private void Start()
     {
-        // Garante que o painel comece opaco e faça fade-in ao carregar a cena
-        fadeImage.color = Color.black;
+        // Começa com o painel ativo e transparente, fazendo fade-in
+        gameObject.SetActive(true);
+        fadeImage.color = Color.black; // Começa opaco
         StartCoroutine(FadeIn());
     }
 
-    // Função para iniciar o fade e trocar de cena
     public void FadeToScene(string sceneName)
     {
+        // Garante que o painel está ativo antes de iniciar o fade-out
+        gameObject.SetActive(true);
         StartCoroutine(FadeOut(sceneName));
     }
 
-    // Fade-in (simula abrir os olhos)
     IEnumerator FadeIn()
     {
         float elapsedTime = 0f;
@@ -30,15 +31,16 @@ public class SceneFader : MonoBehaviour
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
-            color.a = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration); // De opaco para transparente
+            color.a = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
             fadeImage.color = color;
             yield return null;
         }
-        color.a = 0f; // Garante que fica totalmente transparente
+        color.a = 0f;
         fadeImage.color = color;
+        // Opcional: desativar após o fade-in
+        gameObject.SetActive(false);
     }
 
-    // Fade-out (escurece antes de trocar de cena)
     IEnumerator FadeOut(string sceneName)
     {
         float elapsedTime = 0f;
@@ -47,14 +49,13 @@ public class SceneFader : MonoBehaviour
         while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
-            color.a = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration); // De transparente para opaco
+            color.a = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
             fadeImage.color = color;
             yield return null;
         }
-        color.a = 1f; // Garante que fica totalmente opaco
+        color.a = 1f;
         fadeImage.color = color;
 
-        // Troca para a nova cena
         SceneManager.LoadScene(sceneName);
     }
 }
