@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sentences:
   - ActorData: {fileID: 11400000, guid: 7c8e27d203c2a36428a567e34ffd2a3f, type: 2}
-    content: bloqueado otario
+    content: Mensagem bloqueada. Aguarde 24h e tente novamente.
   - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
-    content: 'pdp fui burro
-
-'
+    content: "Que mo\xE7a chata..."

@@ -15,7 +15,7 @@ namespace Inventory.Model
         private List<InventoryItem> inventoryItems; // Lista de itens do inventário
 
         [field: SerializeField]
-        public int Size { get; private set; } = 10; // Define o tamanho do inventário
+        public int Size { get; private set; } = 30; // Define o tamanho do inventário
 
         public event Action<Dictionary<int, InventoryItem>> OnInventoryUpdated; // Evento para notificar mudanças no inventário
 

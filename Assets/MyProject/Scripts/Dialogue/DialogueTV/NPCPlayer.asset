@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: NPCPlayer
   m_EditorClassIdentifier: 
   CharName: Jason
-  sprite: {fileID: -1187634058, guid: c5edf64104cd3f94e8bf8ad834831f06, type: 3}
+  sprite: {fileID: 21300000, guid: 2c9f1e5d42638ba4d97cef41c9583e3d, type: 3}

@@ -102,7 +102,7 @@ public class PortaTrancadaController : MonoBehaviour
                 if (doorAudioSource != null && lockedSound != null)
                     doorAudioSource.PlayOneShot(lockedSound);
 
-                popUpObject.TriggerPopUp("A porta está trancada. Você não tem a chave.",
+                popUpObject.TriggerPopUp("Usar a chave?",
                     () => MostrarDialogoSemChave(),
                     () => { popUpAtivado = false; Debug.Log("O jogador fechou o pop-up."); });
             }

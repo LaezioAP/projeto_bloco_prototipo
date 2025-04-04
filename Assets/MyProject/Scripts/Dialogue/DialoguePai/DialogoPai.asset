@@ -13,5 +13,19 @@ MonoBehaviour:
   m_Name: DialogoPai
   m_EditorClassIdentifier: 
   Sentences:
-  - ActorData: {fileID: 0}
-    content: 
+  - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
+    content: Bom dia pap-
+  - ActorData: {fileID: 11400000, guid: f49662f4bd68c504ea037e0575027b62, type: 2}
+    content: "Garoto! Fale baixo, estou com uma dor de cabe\xE7a terr\xEDvel..."
+  - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
+    content: "Desculpa... Voc\xEA estava dormindo?"
+  - ActorData: {fileID: 11400000, guid: f49662f4bd68c504ea037e0575027b62, type: 2}
+    content: "Tentando, mas n\xE3o h\xE1 paz nessa casa!"
+  - ActorData: {fileID: 11400000, guid: f49662f4bd68c504ea037e0575027b62, type: 2}
+    content: "O controle da televis\xE3o est\xE1 sem pilha."
+  - ActorData: {fileID: 11400000, guid: f49662f4bd68c504ea037e0575027b62, type: 2}
+    content: Procure uma pela casa e coloque nele.
+  - ActorData: {fileID: 11400000, guid: f49662f4bd68c504ea037e0575027b62, type: 2}
+    content: "Quero ver as not\xEDcias."
+  - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
+    content: Ok, vou procurar.

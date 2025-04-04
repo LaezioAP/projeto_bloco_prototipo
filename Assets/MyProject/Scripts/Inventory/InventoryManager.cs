@@ -17,7 +17,7 @@ namespace Inventory
 
         [Header("Inventory Data")]
         [SerializeField] private InventorySO inventoryData; // ScriptableObject que armazena os dados do inventário
-        [SerializeField] private int inventorySize = 5; // Tamanho máximo do inventário
+        [SerializeField] private int inventorySize = 30; // Tamanho máximo do inventário
         [SerializeField] private List<InventoryItem> initialItems; // Itens iniciais do inventário
 
         private void Start()

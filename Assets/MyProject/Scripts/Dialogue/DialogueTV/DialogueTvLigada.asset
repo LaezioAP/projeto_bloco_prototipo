@@ -14,17 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sentences:
   - ActorData: {fileID: 11400000, guid: c0bbdb15d1eced8429e64629c2da4012, type: 2}
-    content: "Na noite desta ter\xE7a-feira, foi encontrado morto o Sargento Oficial
-      da delegacia de Kansas City."
+    content: "Policial encontrado morto em estacionamento nesta manh\xE3 de ter\xE7a."
   - ActorData: {fileID: 11400000, guid: c0bbdb15d1eced8429e64629c2da4012, type: 2}
-    content: "Sargento Bruce estava envolvido em esquemas de corrup\xE7\xE3o e lavagem
-      de dinheiro."
+    content: "Investiga\xE7\xE3o aponta poss\xEDvel execu\xE7\xE3o."
+  - ActorData: {fileID: 11400000, guid: f49662f4bd68c504ea037e0575027b62, type: 2}
+    content: O que!?
   - ActorData: {fileID: 11400000, guid: c0bbdb15d1eced8429e64629c2da4012, type: 2}
-    content: "Investiga\xE7\xF5es iniciais indicam que a raz\xE3o do crime foi um
-      \"Cala boca\""
+    content: "A v\xEDtima, Scott Wilson, era policial h\xE1 15 anos."
   - ActorData: {fileID: 11400000, guid: c0bbdb15d1eced8429e64629c2da4012, type: 2}
-    content: Ele deixa esposa e duas filhas, de 8 e 16 anos.
-  - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
-    content: "J\xE1 vi este homem quando fui no trabalho do papai."
-  - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
-    content: "Que not\xEDcia terr\xEDvel."
+    content: "Fontes indicam envolvimento em um caso de corrup\xE7\xE3o."
+  - ActorData: {fileID: 11400000, guid: f49662f4bd68c504ea037e0575027b62, type: 2}
+    content: "CORRUP\xC7\xC3O!? Est\xE3o loucos, Scott nunca... Por Deus Scott...."
+  - ActorData: {fileID: 11400000, guid: c0bbdb15d1eced8429e64629c2da4012, type: 2}
+    content: Ele teria denunciado um esquema interno.
+  - ActorData: {fileID: 11400000, guid: c0bbdb15d1eced8429e64629c2da4012, type: 2}
+    content: "A pol\xEDcia investiga se o assassinato foi um acerto de contas."
+  - ActorData: {fileID: 11400000, guid: f49662f4bd68c504ea037e0575027b62, type: 2}
+    content: "N\xE3o pode ser..."
+  - ActorData: {fileID: 11400000, guid: c0bbdb15d1eced8429e64629c2da4012, type: 2}
+    content: "At\xE9 o momento, ningu\xE9m foi preso."
