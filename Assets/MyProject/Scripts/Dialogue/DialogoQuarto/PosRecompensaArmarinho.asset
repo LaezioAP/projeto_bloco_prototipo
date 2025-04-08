@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sentences:
   - ActorData: {fileID: 11400000, guid: 9940a59d5c0c1894d8976f90b9c1a4f8, type: 2}
-    content: Que belo segredo em papai....
+    content: "S\xF3 tem umas roupas velhas aqui dentro"
